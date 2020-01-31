@@ -5,5 +5,6 @@ Hourly global temperature and pressure (HGTP) model is based on the full spatial
 
 The model was developed at the Dom Luiz Institute (IDL), Faculty of Sciences of the University of Lisbon (FCUL), by Pedro Mateus, João Catalão, Virgílio Mendes and Ana Navarro. Also by Giovanni Nico from the Istituto per le Applicazioni del Calcolo (IAC), Consiglio Nazionale delle Ricerche (CNR), 70126 Bari, Italy. 
 ![](logos.png)
+<img src="https://github.com/pjmateus/hgpt/blob/master/logos.png" width="250">
 
 We will upload the files soon...
