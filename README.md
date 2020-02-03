@@ -1,4 +1,4 @@
-# hgpt
+# hgpt model
 **An ERA5-based hourly global temperature and pressure model**
 
 Hourly global temperature and pressure (HGTP) model is based on the full spatial and temporal resolution of the new ERA5 reanalysis produced by the ECMWF. The HGPT is based on the time-segmentation concept and uses three periodicities for surface air temperature and two for surface pressure. The weight mean temperature is determined using 20-years of monthly data to contemplate its seasonality and geographic variability. We also introduced a linear trend to account with the global climate change scenario.
