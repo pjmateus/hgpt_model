@@ -7,4 +7,21 @@ The model was developed at the Dom Luiz Institute (IDL), Faculty of Sciences of 
 
 <img src="https://github.com/pjmateus/hgpt/blob/master/logos.png" width="450">
 
-We will upload the files soon...
+The same code is available in three programming languages, Fortran, Matlab and Python. The header contains guidelines for running each of these codes.
+
+Simple Fortran code of how to call the hgpt subroutine (in file hgpt.f90) 
+```Fortran
+program call_hgpt_model
+	implicit None
+  real :: x0, y0, z0, P, T, Tm, ZHD
+	real*8, dimension(1) :: dt
+	y0 = 38.5519    ! Latitude, degrees
+	x0 = -9.0147    ! Longitude, degrees
+	z0 = 25         ! Orthometric height, m
+	dt(1) = 58119.5 ! MJD
+	call hgpt(dt, size(dt), x0, y0, z0, 'orth', P, T, Tm, ZHD)
+	write(*,*) P, T, Tm, ZHD
+end program call_hgpt_model             
+```
+Save this file with the name call_hgpt_model.f90 and compile: gfortran hgpt.f90 call_hgpt_model.f90 -o call_hgpt_model.exe
+Module constructs can also be easily implemented.
