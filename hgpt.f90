@@ -34,7 +34,7 @@
 !
 ! Set the following variables in the script from which you call hgpt.f90:
 !--------------------------------------------------------------------------!
-!       real :: x0, y0, z0, P, T, Tm, ZHD                                  !
+!       real :: x0, y0, z0, P, T, Tm, ZHD                                  ! 
 !	real*8, dimension(6) :: dt           ! Gregorian Calendar          !
 !                                                                          !
 ! Define variables values and call hgtp:                                   !
