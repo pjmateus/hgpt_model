@@ -58,7 +58,6 @@
 !	call hgpt(dt, size(dt), x0, y0, z0, 'orth', P, T, Tm, ZHD)         !
 !	write(*,*) P, T, Tm, ZHD                                           !
 !end program call_hgpt                                                     !
-!Run the code in terminal: gfortran hgpt.f90 -fbounds-check -o hgpt.exe    !
 !--------------------------------------------------------------------------!
 ! written by Pedro Mateus (2020/01/15)
 ! Instituto Dom Luiz (IDL), Faculdade de Ciências, Universidade de Lisboa, 1749-016 Lisboa, Portugal
