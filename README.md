@@ -47,6 +47,12 @@ dt = 58119.5  # MJD
 P, T, Tm, ZHD = hgpt(dt, x0, y0, z0, 'orth')
 ```
 Locate the function hgpt.py and the binary grid files (or set the coeffiles variable in hgpt.py file) and run this code.
+Requirements:
+
+You need Python 3.2 or later and julian 0.14. You can install julian like this:
+
+$ pip install julian
 
 **If you have any questions do not hesitate to contact me by email pjmateus@fc.ul.pt**
+
 Mateus P.; Catalão J.; V. B. Mendes; G. Nico; An ERA5-based hourly global pressure and temperature (HGPT) model. (submitted to Remote Sensing).
