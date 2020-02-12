@@ -27,7 +27,7 @@ end program call_hgpt_model
 ```
 Save this file with the name call_hgpt_model.f90 and compile with "gfortran hgpt.f90 call_hgpt_model.f90 -o call_hgpt_model.exe". Module constructs can also be easily implemented.
 
-Matlab code to call the hgpt function 
+Matlab code to call the hgpt function [![View hgpt model on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/74240-hgpt-model)
 ```Matlab
 y0 = 38.5519;  % Latitude, degrees
 x0 = -9.0147;  % Longitude, degrees
