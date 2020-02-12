@@ -83,7 +83,7 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 
 	! Input datetime format
 	if ( ndt == 6)  then
-		year = idint(dt(1)); month = idint(dt(2)); day = idint(dt(3))
+		year = idint(dt(1)); month = idint(dt(2)); day = idint(dt(3)) 
 		hour = idint(dt(4)); minute = idint(dt(5)); sec = idint(dt(6))		
 		call greg2modjul(year, month, day, hour, minute, sec, mjd)
 	else if ( ndt == 1 ) then
