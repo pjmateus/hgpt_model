@@ -47,3 +47,5 @@ dt = 58119.5  # MJD
 P, T, Tm, ZHD = hgpt(dt, x0, y0, z0, 'orth')
 ```
 Locate the function hgpt.py and the binary grid files (or set the coeffiles variable in hgpt.py file) and run this code.
+
+### If you have any questions do not hesitate to contact me by email pjmateus@fc.ul.pt
