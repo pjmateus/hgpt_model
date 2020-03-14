@@ -103,7 +103,7 @@ F = griddedInterpolant({lon,lat}, a3', 'linear', 'linear'); amp3 = F(x0, y0);
 F = griddedInterpolant({lon,lat}, f3', 'linear', 'linear'); pha3 = F(x0, y0);
 
 % Surface air temperature model
-T = a + b*mjd + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + ...
+T = a + b*(mjd - 51178) + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + ...
     amp2*cos(2*pi*(mjd - 51178)/p2+pha2) + ...
     amp3*cos(2*pi*(mjd - 51178)/p3+pha3);
 
@@ -131,7 +131,7 @@ F = griddedInterpolant({lon,lat}, a2', 'linear', 'linear'); amp2 = F(x0, y0);
 F = griddedInterpolant({lon,lat}, f2', 'linear', 'linear'); pha2 = F(x0, y0);
 
 % Surface pressure model
-P = a + b*mjd + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + ...
+P = a + b*(mjd - 51178) + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + ...
     amp2*cos(2*pi*(mjd - 51178)/p2+pha2);
 
 % Open and read the Tm coefficients and undulation file
