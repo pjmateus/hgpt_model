@@ -129,9 +129,9 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	call interpolate(lon, lat, float(f3)/10000.0, x0, y0, i, j, pha3)
 
 	! Surface air temperature model
-	T = a + b*mjd + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + & 
-             		amp2*cos(2*pi*(mjd - 51178)/p2+pha2) + & 
-             	   	amp3*cos(2*pi*(mjd - 51178)/p3+pha3)
+	T = a + b*(mjd - 51178) + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + & 
+             		          amp2*cos(2*pi*(mjd - 51178)/p2+pha2) + & 
+             	   	          amp3*cos(2*pi*(mjd - 51178)/p3+pha3)
 	
 	! Open and read the surface pressure coefficients file
 	open(11, file='press_grid.bin', status='old', action='read', &
@@ -157,8 +157,8 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	call interpolate(lon, lat, float(f2)/10000.0, x0, y0, i, j, pha2)
 
 	! Surface pressure model
-	P = a + b*mjd + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + & 
-                	amp2*cos(2*pi*(mjd - 51178)/p2+pha2) 
+	P = a + b*(mjd - 51178) + amp1*cos(2*pi*(mjd - 51178)/p1+pha1) + & 
+                	          amp2*cos(2*pi*(mjd - 51178)/p2+pha2) 
 
 	! Open and read the weight mean temperature and undulation coefficients file
 	open(12, file='tm_grid.bin', status='old', action='read', &
