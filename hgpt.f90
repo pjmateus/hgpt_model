@@ -138,7 +138,7 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	     form='unformatted', access='stream', iostat=ios)
 	if ( ios /= 0 ) stop 'Error opening file press_grid.bin'
         		
-	! hour varies from 0 to 23 UTC
+	! hour varies from 0 to 23 UTC 
 	call fseek(11, (row*col*20)*hour, 0)
 	read(11) y_intercept	
 	read(11) slope			
