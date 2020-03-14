@@ -107,9 +107,9 @@ def hgpt(dt, x0, y0, z0, z0_type):
        F = RegularGridInterpolator((lat, lon), f3, method='linear'); pha3 = F(np.array([y0, x0]))[0]
 
        # Surface air temperature model
-       T = a + b*mjd + amp1*np.cos(2*np.pi*(mjd - 51178)/p1+pha1) + \
-                       amp2*np.cos(2*np.pi*(mjd - 51178)/p2+pha2) + \
-                       amp3*np.cos(2*np.pi*(mjd - 51178)/p3+pha3)
+       T = a + b*(mjd - 51178) + amp1*np.cos(2*np.pi*(mjd - 51178)/p1+pha1) + \
+                                 amp2*np.cos(2*np.pi*(mjd - 51178)/p2+pha2) + \
+                                 amp3*np.cos(2*np.pi*(mjd - 51178)/p3+pha3)
 
        # Open and read the surface pressure coefficients file
        fid = open(coeffiles+'press_grid.bin', 'rb')
@@ -131,8 +131,8 @@ def hgpt(dt, x0, y0, z0, z0_type):
        F = RegularGridInterpolator((lat, lon), f2, method='linear'); pha2 = F(np.array([y0, x0]))[0]
        
        # Surface pressure model
-       P = a + b*mjd + amp1*np.cos(2*np.pi*(mjd - 51178)/p1+pha1) + \
-                       amp2*np.cos(2*np.pi*(mjd - 51178)/p2+pha2)
+       P = a + b*(mjd - 51178) + amp1*np.cos(2*np.pi*(mjd - 51178)/p1+pha1) + \
+                                 amp2*np.cos(2*np.pi*(mjd - 51178)/p2+pha2)
                        
        # Open and read the Tm coefficients and undulation file
        fid = open(coeffiles+'tm_grid.bin', 'rb')   
