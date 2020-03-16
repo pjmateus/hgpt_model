@@ -169,6 +169,6 @@ T = T - 0.0065*(H_orth - geo_height);
 Tm = a + b*T;
 
 % ZHD using the Saastamoinen Model (see Saastamoinen, 1973)
-ZHD = (0.0022768 * P)/(1 - 0.0026*cos(2*deg2rad(y0)-0.00000028)*H_orth);
+ZHD = (0.0022768 * P)/(1 - 0.0026*cos(2*deg2rad(y0))-0.00000028*H_orth);
 
 return
