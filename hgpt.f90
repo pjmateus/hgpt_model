@@ -187,8 +187,8 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	end if
 
 	! Correction to P and T (see Guochanf Xu, GPS Theory, Algorithms and Applications, 2nd Edition, page 56)
-	P = P * (1.0 - 0.000226*(H_orth - alt))**5.225
-	T = T - 0.0065*(H_orth - alt)
+	! P = P * (1.0 - 0.000226*(H_orth - alt))**5.225
+	! T = T - 0.0065*(H_orth - alt)
 
 	! Weight mean temperature (Tm) linear model 
 	Tm = a + b * T
