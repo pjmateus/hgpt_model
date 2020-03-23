@@ -79,7 +79,7 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	real, dimension(:,:) :: y_intercept(row, col), slope(row, col), a1(row, col), a2(row, col), a3(row, col), & 
 	                        orography(row, col), undu(row, col)
 	integer*2, dimension(:,:) :: f1(row, col), f2(row, col), f3(row, col) 
-	real :: a, b, amp1, pha1, amp2, pha2, amp3, pha3, alt, N, H_orth, H_ellip
+	real :: a, b, amp1, pha1, amp2, pha2, amp3, pha3, geo_height, N, H_orth, H_ellip
 
 	! Input datetime format
 	if ( ndt == 6)  then
@@ -174,7 +174,7 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	! Bilinear interpolation
 	call interpolate(lon, lat, y_intercept, x0, y0, i, j, a)
 	call interpolate(lon, lat, slope, x0, y0, i, j, b)	
-	call interpolate(lon, lat, orography, x0, y0, i, j, alt)
+	call interpolate(lon, lat, orography, x0, y0, i, j, geo_height)
 	call interpolate(lon, lat, undu, x0, y0, i, j, N)
 
 	! Zenith hydrostatic delay (ZHD), Saastamoinen model
@@ -187,8 +187,8 @@ subroutine hgpt(dt, ndt, x0, y0, z0, z0_type, P, T, Tm, ZHD)
 	end if
 
 	! Correction to P and T (see Guochanf Xu, GPS Theory, Algorithms and Applications, 2nd Edition, page 56)
-	! P = P * (1.0 - 0.000226*(H_orth - alt))**5.225
-	! T = T - 0.0065*(H_orth - alt)
+	P = (P*100.0 * (1.0 - 0.0065/T * (H_orth - geo_height))**5.2559)/100.0
+	T = T - 0.0065*(H_orth - geo_height)
 
 	! Weight mean temperature (Tm) linear model 
 	Tm = a + b * T
