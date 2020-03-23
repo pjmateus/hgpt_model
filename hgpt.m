@@ -162,8 +162,8 @@ else
 end
 
 % Correction to P and T (see Guochanf Xu, GPS Theory, Algorithms and Applications, 2nd Edition, page 56)
-% P = P * (1.0 - 0.000226*(H_orth - geo_height))^5.225;
-% T = T - 0.0065*(H_orth - geo_height);
+P = (P*100 * (1 - 0.0065/T * (H_orth - geo_height))^5.2559)/100;
+T = T - 0.0065*(H_orth - geo_height);
 
 % Weight mean temperature, Tm
 Tm = a + b*T;
