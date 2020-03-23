@@ -157,8 +157,8 @@ def hgpt(dt, x0, y0, z0, z0_type):
               raise NameError('Use 1) <<orth>> for Orthometric height or 2) <<elli>> for Ellipsoidal height (in m).')
 
        # Correction to P and T (see Guochanf Xu, GPS Theory, Algorithms and Applications, 2nd Edition, page 56)
-       # P = P * (1.0 - 0.000226*(H_orth - geo_height))**5.225
-       # T = T - 0.0065*(H_orth - geo_height)
+       P = (P*100.0 * (1.0 - 0.0065/T * (H_orth - geo_height))**5.2559)/100.0
+       T = T - 0.0065*(H_orth - geo_height)
        
        # Weight mean temperature, Tm
        Tm = a + b*T
