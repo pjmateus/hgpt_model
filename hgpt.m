@@ -1,6 +1,9 @@
 function [P, T, Tm, ZHD] = hgpt(dt, x0, y0, z0, z0_type)
 % hgpt.m
 %
+%Mateus, P.; Catalão, J.; Mendes, V.B.; Nico, G. An ERA5-Based Hourly Global Pressure and Temperature (HGPT) Model. 
+%Remote Sens. 2020, 12, 1098; https://doi.org/10.3390/rs12071098
+%
 % This routine determines the surface pressure (P), surface air temperature (T), 
 % weighed mean temperature (Tm), and zenith hydrostatic delay (ZHD) from binary coefficient files
 % As available from:
