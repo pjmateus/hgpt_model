@@ -55,4 +55,6 @@ $ pip install julian
 ```
 **If you have any questions do not hesitate to contact me by email pjmateus@fc.ul.pt**
 
-Mateus P.; Catalão J.; V. B. Mendes; G. Nico; An ERA5-based hourly global pressure and temperature (HGPT) model. (submitted to Remote Sensing).
+Don't forget to cite:
+
+Mateus, P.; Catalão, J.; Mendes, V.B.; Nico, G. An ERA5-Based Hourly Global Pressure and Temperature (HGPT) Model. Remote Sens. 2020, 12, 1098; https://doi.org/10.3390/rs12071098 
