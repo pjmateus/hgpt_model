@@ -14,6 +14,7 @@ The same code is available in three programming languages, Fortran, Matlab and P
 <img src="https://github.com/pjmateus/hgpt/blob/master/rel_info.png" width="550">
 [![](https://github.com/pjmateus/hgpt/blob/master/rel_info.png)](#)
 <a href="#"><img src="https://github.com/pjmateus/hgpt/blob/master/rel_info.png" width="550" /></a>
+![badge](https://github.com/pjmateus/hgpt/blob/master/rel_info.png)
 
 Simple Fortran code to call the hgpt subroutine (in file hgpt.f90) 
 ```Fortran
