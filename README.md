@@ -12,6 +12,8 @@ The same code is available in three programming languages, Fortran, Matlab and P
 **To download the binary grid files use the release section (v1.0)**
 
 <img src="https://github.com/pjmateus/hgpt/blob/master/rel_info.png" width="550">
+[![](https://github.com/pjmateus/hgpt/blob/master/rel_info.png)](#)
+<a href="#"><img src="https://github.com/pjmateus/hgpt/blob/master/rel_info.png" width="550" /></a>
 
 Simple Fortran code to call the hgpt subroutine (in file hgpt.f90) 
 ```Fortran
