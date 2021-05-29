@@ -13,7 +13,7 @@ In the development of the second version we also count on the help of Sandra M. 
 The same code is available in three programming languages, Fortran, Matlab and Python. The header contains guidelines for running each of these codes. 
 **We advise using the version 2 code as it offers significant improvements, mainly in the interpolation process, eliminating intrinsic function as griddedInterpolant or RegularGridInterpolator. We also eliminate the use of mjuliandate in Matlab once it requires Aerospace Toolbox.**
 
-**To download the binary grid files for HGPT use the [release section (v1.0)](https://github.com/pjmateus/hgpt_model/releases)**
+**To download the binary grid files for HGPT use the [release section (v1.0)](https://github.com/pjmateus/hgpt_model/releases)**\
 **To download the binary grid files for HGPT2 use the [release section (v2.0)](https://github.com/pjmateus/hgpt_model/releases)**
 
 Simple Fortran code to call the hgpt subroutine (in file hgpt.f90) 
