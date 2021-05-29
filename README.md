@@ -73,5 +73,5 @@ $ pip install julian
 
 Don't forget to cite:
 
-Mateus, P.; Catalão, J.; Mendes, V.B.; Nico, G. An ERA5-Based Hourly Global Pressure and Temperature (HGPT) Model. Remote Sens. 2020, 12, 1098; https://doi.org/10.3390/rs12071098 
+Mateus, P.; Catalão, J.; Mendes, V.B.; Nico, G. An ERA5-Based Hourly Global Pressure and Temperature (HGPT) Model. Remote Sens. 2020, 12, 1098; https://doi.org/10.3390/rs12071098 \
 Mateus, P.; Mendes, V.B.; Sandra M. P. HGPT2: an ERA5-based global model to estimate relative humidity (submitted to Remote Sensing, MDPI)
