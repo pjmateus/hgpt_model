@@ -3,13 +3,15 @@
 
 Hourly global pressure and temperature and pressure (HGTP) model is based on the full spatial and temporal resolution of the new ERA5 reanalysis produced by the ECMWF. The HGPT is based on the time-segmentation concept and uses three periodicities for surface air temperature and two for surface pressure. The weighted mean temperature is determined using 20-years of monthly data to contemplate its seasonality and geographic variability. We also introduced a linear trend to account for the global climate change scenario.
 
-**Version 2 is also based on the time-segmentation concept. We introduced the relative humidity (RH, %), the zenith wet delay (ZWD, m), and the precipitable water vapor (PWV, m).** 
+**Version 2 is also based on the time-segmentation concept. We introduced the relative humidity (RH, %), the zenith wet delay (ZWD, m), and the precipitable water vapor (PWV, m). The zenith total delay (ZTD) is easily calculated by ZTD = ZHD + ZWD, and the water vapor (e) or saturated water vapor (es) can be calculated using the temperature and relative humidity, e.g., using the Wexler formulation (available in the code).** 
 
-The model was developed at the Dom Luiz Institute (IDL), Faculty of Sciences of the University of Lisbon (FCUL), by Pedro Mateus, João Catalão and Virgílio Mendes. Also by Giovanni Nico from the Istituto per le Applicazioni del Calcolo (IAC), Consiglio Nazionale delle Ricerche (CNR), 70126 Bari, Italy. 
+The model was developed at the Dom Luiz Institute (IDL), Faculty of Sciences of the University of Lisbon (FCUL), by Pedro Mateus, João Catalão and Virgílio Mendes. Also by Giovanni Nico from the Istituto per le Applicazioni del Calcolo (IAC), Consiglio Nazionale delle Ricerche (CNR), 70126 Bari, Italy.
+In the development of the second version we also count on the help of Sandra M. Plecha from FCUL/IDL.
 
 <img src="https://github.com/pjmateus/hgpt/blob/master/logos.png" width="450">
 
 The same code is available in three programming languages, Fortran, Matlab and Python. The header contains guidelines for running each of these codes. 
+**We advise using the version 2 code as it offers significant improvements, mainly in the interpolation process, eliminating intrinsic function as griddedInterpolant or RegularGridInterpolator. We also eliminate the use of mjuliandate in Matlab once it requires Aerospace Toolbox.**
 
 **To download the binary grid files use the [release section (v1.0)](https://github.com/pjmateus/hgpt_model/releases)**
 
